@@ -1,0 +1,57 @@
+{
+  "common": {
+    "welcome": "Bienvenido",
+    "home": "Inicio",
+    "results": "Resultados",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "search": "Buscar"
+  },
+  "home": {
+    "title": "Bienvenido a Direct Ferries",
+    "description": "Reserve su cruce en ferry hoy"
+  },
+  "results": {
+    "title": "Resultados de busqueda",
+    "description": "Explore los cruces en ferry disponibles"
+  },
+  "searchBar": {
+    "from": "Desde",
+    "to": "Hasta",
+    "date": "Fecha",
+    "search": "Buscar",
+    "selectDeparturePort": "Seleccionar puerto de salida",
+    "selectArrivalPort": "Seleccionar puerto de llegada",
+    "selectDate": "Seleccionar fecha"
+  },
+  "searchControls": {
+    "resultsFound": "{count, plural, =1 {# resultado} other {# resultados}} encontrados",
+    "sortBy": "Ordenar por",
+    "order": "Orden",
+    "default": "Predeterminado",
+    "price": "Precio",
+    "departure": "Salida",
+    "duration": "Duracion",
+    "ascending": "Ascendente",
+    "descending": "Descendente"
+  },
+  "pagination": {
+    "show": "Mostrar",
+    "perPage": "por pagina",
+    "pageOf": "Pagina {page} de {total}",
+    "previousPage": "Ir a la pagina anterior",
+    "nextPage": "Ir a la pagina siguiente",
+    "rangeOf": "Mostrando {start}-{end} de {total} resultados",
+    "navigation": "Paginacion de resultados de busqueda",
+    "pageNavigation": "Navegacion de paginas"
+  },
+  "resultCard": {
+    "ship": "Barco",
+    "duration": "Duracion",
+    "select": "Seleccionar"
+  },
+  "noResults": {
+    "title": "No se encontraron ferries",
+    "description": "No pudimos encontrar ferries que coincidan con sus criterios de busqueda."
+  }
+}

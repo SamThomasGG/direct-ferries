@@ -1,0 +1,57 @@
+{
+  "common": {
+    "welcome": "Willkommen",
+    "home": "Startseite",
+    "results": "Ergebnisse",
+    "about": "Uber uns",
+    "contact": "Kontakt",
+    "search": "Suchen"
+  },
+  "home": {
+    "title": "Willkommen bei Direct Ferries",
+    "description": "Buchen Sie Ihre Fahreuberfahrt heute"
+  },
+  "results": {
+    "title": "Suchergebnisse",
+    "description": "Durchsuchen Sie verfugbare Fahrverbindungen"
+  },
+  "searchBar": {
+    "from": "Von",
+    "to": "Nach",
+    "date": "Datum",
+    "search": "Suchen",
+    "selectDeparturePort": "Abfahrtshafen wahlen",
+    "selectArrivalPort": "Ankunftshafen wahlen",
+    "selectDate": "Datum wahlen"
+  },
+  "searchControls": {
+    "resultsFound": "{count, plural, =1 {# Ergebnis} other {# Ergebnisse}} gefunden",
+    "sortBy": "Sortieren nach",
+    "order": "Reihenfolge",
+    "default": "Standard",
+    "price": "Preis",
+    "departure": "Abfahrt",
+    "duration": "Dauer",
+    "ascending": "Aufsteigend",
+    "descending": "Absteigend"
+  },
+  "pagination": {
+    "show": "Anzeigen",
+    "perPage": "pro Seite",
+    "pageOf": "Seite {page} von {total}",
+    "previousPage": "Zur vorherigen Seite",
+    "nextPage": "Zur nachsten Seite",
+    "rangeOf": "Zeige {start}-{end} von {total} Ergebnissen",
+    "navigation": "Suchergebnisse Paginierung",
+    "pageNavigation": "Seitennavigation"
+  },
+  "resultCard": {
+    "ship": "Schiff",
+    "duration": "Dauer",
+    "select": "Auswahlen"
+  },
+  "noResults": {
+    "title": "Keine Fahren gefunden",
+    "description": "Wir konnten keine Fahren finden, die Ihren Suchkriterien entsprechen."
+  }
+}

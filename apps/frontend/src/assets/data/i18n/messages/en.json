@@ -1,0 +1,57 @@
+{
+  "common": {
+    "welcome": "Welcome",
+    "home": "Home",
+    "results": "Results",
+    "about": "About",
+    "contact": "Contact",
+    "search": "Search"
+  },
+  "home": {
+    "title": "Welcome to Direct Ferries",
+    "description": "Book your ferry crossing today"
+  },
+  "results": {
+    "title": "Search Results",
+    "description": "Browse available ferry crossings"
+  },
+  "searchBar": {
+    "from": "From",
+    "to": "To",
+    "date": "Date",
+    "search": "Search",
+    "selectDeparturePort": "Select departure port",
+    "selectArrivalPort": "Select arrival port",
+    "selectDate": "Select date"
+  },
+  "searchControls": {
+    "resultsFound": "{count, plural, =1 {# result} other {# results}} found",
+    "sortBy": "Sort by",
+    "order": "Order",
+    "default": "Default",
+    "price": "Price",
+    "departure": "Departure",
+    "duration": "Duration",
+    "ascending": "Ascending",
+    "descending": "Descending"
+  },
+  "pagination": {
+    "show": "Show",
+    "perPage": "per page",
+    "pageOf": "Page {page} of {total}",
+    "previousPage": "Go to previous page",
+    "nextPage": "Go to next page",
+    "rangeOf": "Showing {start}-{end} of {total} results",
+    "navigation": "Search results pagination",
+    "pageNavigation": "Page navigation"
+  },
+  "resultCard": {
+    "ship": "Ship",
+    "duration": "Duration",
+    "select": "Select"
+  },
+  "noResults": {
+    "title": "No ferries found",
+    "description": "We couldn't find any ferries matching your search criteria."
+  }
+}

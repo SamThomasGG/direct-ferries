@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./data/dev.db"
+}
+
+model Search {
+  id            String    @id @default(cuid())
+  origin        String
+  destination   String
+  departureDate DateTime
+  returnDate    DateTime?
+  passengers    Int       @default(1)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model Ferry {
+  id           String   @id
+  operator     String
+  ship         String
+  from         String
+  to           String
+  departure    DateTime
+  arrival      DateTime
+  durationMins Int
+  price        Float
+}

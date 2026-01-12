@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'bun:test';
-import { buildQuery } from './build-query';
 import { SearchQueryDTO } from '../search.dto';
+import { buildQuery } from './build-query';
 
 const defaultQuery: SearchQueryDTO = {
   sort: 'price',

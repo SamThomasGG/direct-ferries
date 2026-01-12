@@ -2,13 +2,17 @@
 
 ## Setup
 
-At the root run `turbo i` to install all dependencies.
+At the root run `bun i` to install all dependencies.
 
 Then create your `.env` file in both the frontend and backend from the example.
 
-Run `turbo build && turbo start` to start both apps.
+Run `turbo build && turbo start` to build prisma and start both apps.
 
 Open `http://localhost:3000` to start.
+
+### Testing
+
+Run `turbo test` at the root to run the unit tests
 
 
 ## Tech Stack Choice
@@ -24,6 +28,7 @@ Biome - instead of ES Lint and Prettier due to its increased speed
 - Shadcn
 - Zod
 - i18n
+- React Query
 
 
 ### Backend
@@ -33,6 +38,7 @@ Biome - instead of ES Lint and Prettier due to its increased speed
 - Zod
 - SQLLite
 - Swagger - go to localhost:5000/api to see swagger docs
+- Morgan basic logging
 
 
 ## Missing features / future improvements
@@ -48,3 +54,7 @@ Biome - instead of ES Lint and Prettier due to its increased speed
 - Shared versioned package with zod schemas to be used on backend and frontend
 - Dockerfile and compose - not needed if only deploying locally, can use `turbo build && turbo start` to have the same effect.
 - UI - could be improved
+- Frontend Debounce - did add as this is usually used when typing in a search box?
+- Logging - upgrade the logging to use something like sentry/datadog/grafana
+- Unit tests - only added some simple tests on the frontend and backend for some of the utility function to keep things simple.
+- Didn't have time for Favourite route or saving the history in local storage.

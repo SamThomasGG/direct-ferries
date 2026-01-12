@@ -1,4 +1,4 @@
-import { describe, expect, mock, test, beforeEach } from 'bun:test';
+import { beforeEach, describe, expect, mock, test } from 'bun:test';
 import { getPorts } from './index';
 
 const mockApiFetch = mock(() => Promise.resolve({ data: [] }));
@@ -12,12 +12,15 @@ describe('getPorts', () => {
     mockApiFetch.mockClear();
   });
 
-  test('calls apiFetch with correct endpoint', async () => {
+  test('calls apiFetch with correct endpoint and caching options', async () => {
     mockApiFetch.mockResolvedValueOnce({ data: ['GBDOV', 'FRCAL'] });
 
     await getPorts();
 
-    expect(mockApiFetch).toHaveBeenCalledWith('search/ports');
+    expect(mockApiFetch).toHaveBeenCalledWith('search/ports', {
+      revalidate: 3600,
+      tags: ['ports'],
+    });
   });
 
   test('returns ports data on success', async () => {

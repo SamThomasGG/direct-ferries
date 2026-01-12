@@ -6,7 +6,10 @@ import {
 
 export async function getPorts(): Promise<Ports> {
   try {
-    const data = await apiFetch<Ports>('search/ports');
+    const data = await apiFetch<Ports>('search/ports', {
+      revalidate: 3600, // Cache for 1 hour
+      tags: ['ports'],
+    });
     return PortsSchema.parse(data);
   } catch (e) {
     console.error(`Failed to fetch ports ${e}`);

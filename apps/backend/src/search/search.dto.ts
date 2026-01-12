@@ -38,11 +38,11 @@ export const SearchQuerySchema = z.object({
 
 export type SearchQueryDTO = z.infer<typeof SearchQuerySchema>;
 
-export const FerrySchema = extendApi(
+export const SailingSchema = extendApi(
   z.object({
-    id: extendApi(z.string(), { description: 'Ferry ID' }),
+    id: extendApi(z.string(), { description: 'Sailing ID' }),
     operator: extendApi(z.string(), {
-      description: 'Ferry operator name',
+      description: 'Sailing operator name',
       example: 'BlueWave Ferries',
     }),
     ship: extendApi(z.string(), {
@@ -70,12 +70,12 @@ export const FerrySchema = extendApi(
       example: 4999,
     }),
   }),
-  { description: 'Ferry crossing details' },
+  { description: 'Sailing crossing details' },
 );
 
 export const SearchResponseSchema = extendApi(
   z.object({
-    data: z.array(FerrySchema),
+    data: z.array(SailingSchema),
     total: extendApi(z.number(), {
       description: 'Total number of results',
       example: 4,

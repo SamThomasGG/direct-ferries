@@ -1,4 +1,6 @@
 import backgroundImage from '@/assets/images/vecteezy_papercut-style-sea-wave-pattern-design-background_7535043-1.jpg';
+import { LocaleSelector } from '@/components/locale-selector';
+import { QueryProvider } from '@/components/providers/query-provider';
 import { locales } from '@/lib/i18n/config';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
@@ -7,7 +9,6 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import '../../assets/styles/globals.css';
-import { LocaleSelector } from '@/components/locale-selector';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -51,12 +52,14 @@ export default async function LocaleLayout({
           priority
           className="object-cover pointer-events-none"
         />
-        <NextIntlClientProvider messages={messages} locale={locale}>
-          <LocaleSelector />
-          <main className="flex min-h-screen flex-col items-center justify-center p-8 relative z-10 space-y-4">
-            {children}
-          </main>
-        </NextIntlClientProvider>
+        <QueryProvider>
+          <NextIntlClientProvider messages={messages} locale={locale}>
+            <LocaleSelector />
+            <main className="flex min-h-screen flex-col items-center justify-center p-8 relative z-10 space-y-4">
+              {children}
+            </main>
+          </NextIntlClientProvider>
+        </QueryProvider>
       </body>
     </html>
   );

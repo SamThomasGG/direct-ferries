@@ -69,11 +69,14 @@ export function Pagination({ total, page, pageSize }: PaginationProps) {
         <span className="text-sm text-gray-600">{t('perPage')}</span>
       </div>
 
-      <div className="text-sm text-gray-600 text-center order-first sm:order-none" aria-live="polite">
+      <div
+        className="text-sm text-gray-600 text-center order-first sm:order-none"
+        aria-live="polite"
+      >
         {t('rangeOf', { start: startItem, end: endItem, total })}
       </div>
 
-      <div className="flex items-center gap-2" role="group" aria-label={t('pageNavigation')}>
+      <div className="flex items-center gap-2">
         <Button
           variant="outline"
           size="icon"

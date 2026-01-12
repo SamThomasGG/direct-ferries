@@ -18,7 +18,7 @@ model Search {
   updatedAt     DateTime  @updatedAt
 }
 
-model Ferry {
+model Sailing {
   id           String   @id
   operator     String
   ship         String
@@ -28,4 +28,6 @@ model Ferry {
   arrival      DateTime
   durationMins Int
   price        Float
+
+  @@map("Ferry")
 }

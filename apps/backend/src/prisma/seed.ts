@@ -50,13 +50,13 @@ const ferryData = [
 ];
 
 async function main() {
-  console.log('Seeding ferry data...');
+  console.log('Seeding sailing data...');
 
-  for (const ferry of ferryData) {
-    await prisma.ferry.upsert({
-      where: { id: ferry.id },
-      update: ferry,
-      create: ferry,
+  for (const sailing of ferryData) {
+    await prisma.sailing.upsert({
+      where: { id: sailing.id },
+      update: sailing,
+      create: sailing,
     });
   }
 

@@ -21,7 +21,8 @@ export class SearchController {
   @Get('')
   @ApiEndpoint({
     summary: 'Search ferries',
-    description: 'Search for ferry crossings with optional filters and pagination',
+    description:
+      'Search for ferry crossings with optional filters and pagination',
     responseType: SearchResponseDto,
     queryType: SearchQueryDto,
   })

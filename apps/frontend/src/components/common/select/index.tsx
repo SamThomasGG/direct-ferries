@@ -1,7 +1,5 @@
 'use client';
 
-import { useId } from 'react';
-import { X } from 'lucide-react';
 import {
   Select,
   SelectContent,
@@ -9,6 +7,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/common/shadcn/select';
+import { X } from 'lucide-react';
+import { useId } from 'react';
 
 interface LabeledSelectProps {
   label: string;

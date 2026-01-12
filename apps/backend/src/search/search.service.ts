@@ -10,12 +10,12 @@ export class SearchService {
 
   async search(query: SearchQueryDTO) {
     try {
-      const data = await this.prisma.ferry.findMany({
+      const data = await this.prisma.sailing.findMany({
         where: buildQuery(query),
         ...buildPagination(query),
       });
 
-      const total = await this.prisma.ferry.count({
+      const total = await this.prisma.sailing.count({
         where: buildQuery(query),
       });
 
@@ -37,11 +37,11 @@ export class SearchService {
   async ports() {
     try {
       const [fromPorts, toPorts] = await Promise.all([
-        this.prisma.ferry.findMany({
+        this.prisma.sailing.findMany({
           select: { from: true },
           distinct: ['from'],
         }),
-        this.prisma.ferry.findMany({
+        this.prisma.sailing.findMany({
           select: { to: true },
           distinct: ['to'],
         }),

@@ -1,7 +1,7 @@
-import gbFlag from '@/assets/images/flags/gb.svg';
+import deFlag from '@/assets/images/flags/de.svg';
 import esFlag from '@/assets/images/flags/es.svg';
 import frFlag from '@/assets/images/flags/fr.svg';
-import deFlag from '@/assets/images/flags/de.svg';
+import gbFlag from '@/assets/images/flags/gb.svg';
 import type { StaticImageData } from 'next/image';
 
 export const locales = [

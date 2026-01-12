@@ -8,7 +8,7 @@ import {
   ApiResponse,
   getSchemaPath,
 } from '@nestjs/swagger';
-import { z, type ZodObject, type ZodRawShape, type ZodTypeAny } from 'zod';
+import { type ZodObject, type ZodRawShape, type ZodTypeAny, z } from 'zod';
 
 const ErrorSchema = extendApi(
   z.object({

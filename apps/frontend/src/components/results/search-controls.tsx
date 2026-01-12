@@ -41,7 +41,9 @@ export function SearchControls({ total }: SearchControlsProps) {
 
       <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
         <div className="flex items-center gap-2">
-          <span className="text-sm text-gray-600 whitespace-nowrap">{t('sortBy')}</span>
+          <span className="text-sm text-gray-600 whitespace-nowrap">
+            {t('sortBy')}
+          </span>
           <Select
             value={sort}
             onValueChange={(value) => updateParam('sort', value)}
@@ -58,7 +60,9 @@ export function SearchControls({ total }: SearchControlsProps) {
         </div>
 
         <div className="flex items-center gap-2">
-          <span className="text-sm text-gray-600 whitespace-nowrap">{t('order')}</span>
+          <span className="text-sm text-gray-600 whitespace-nowrap">
+            {t('order')}
+          </span>
           <Select
             value={order}
             onValueChange={(value) => updateParam('order', value)}

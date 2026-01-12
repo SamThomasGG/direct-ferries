@@ -1,8 +1,8 @@
 'use client';
 
-import { useId } from 'react';
 import { format } from 'date-fns';
 import { CalendarIcon, X } from 'lucide-react';
+import { useId } from 'react';
 
 import { Button } from '@/components/common/shadcn/button';
 import { Calendar } from '@/components/common/shadcn/calendar';
@@ -50,10 +50,14 @@ export function DateSelect({
           <Button
             id={id}
             variant="outline"
-            aria-label={value ? `${label}: ${format(value, 'MMMM d, yyyy')}` : `${label}: ${placeholder}`}
+            aria-label={
+              value
+                ? `${label}: ${format(value, 'MMMM d, yyyy')}`
+                : `${label}: ${placeholder}`
+            }
             className={cn(
               'w-full justify-start text-left font-normal',
-              !value && 'text-muted-foreground'
+              !value && 'text-muted-foreground',
             )}
           >
             <CalendarIcon className="mr-2 h-4 w-4" aria-hidden="true" />
@@ -61,7 +65,12 @@ export function DateSelect({
           </Button>
         </PopoverTrigger>
         <PopoverContent className="w-auto p-0" align="start">
-          <Calendar mode="single" selected={value} onSelect={onChange} autoFocus />
+          <Calendar
+            mode="single"
+            selected={value}
+            onSelect={onChange}
+            autoFocus
+          />
         </PopoverContent>
       </Popover>
     </div>

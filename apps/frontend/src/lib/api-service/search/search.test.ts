@@ -1,7 +1,9 @@
-import { describe, expect, mock, test, beforeEach } from 'bun:test';
+import { beforeEach, describe, expect, mock, test } from 'bun:test';
 import { search } from './index';
 
-const mockApiFetch = mock(() => Promise.resolve({ data: [], total: 0, page: 1, pageSize: 10 }));
+const mockApiFetch = mock(() =>
+  Promise.resolve({ data: [], total: 0, page: 1, pageSize: 10 }),
+);
 
 mock.module('@/lib/api-service/api-fetch', () => ({
   apiFetch: mockApiFetch,
@@ -11,6 +13,8 @@ const mockSearchResponse = {
   data: [
     {
       id: 'DF001',
+      operator: 'BlueWave Ferries',
+      ship: 'MV Horizon',
       from: 'GBDOV',
       to: 'FRCAL',
       departure: '2025-06-01T07:20:00Z',

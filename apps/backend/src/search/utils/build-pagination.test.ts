@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'bun:test';
-import { buildPagination } from './build-pagination';
 import { SearchQueryDTO } from '../search.dto';
+import { buildPagination } from './build-pagination';
 
 const defaultQuery: SearchQueryDTO = {
   sort: 'price',
@@ -36,12 +36,20 @@ describe('buildPagination', () => {
   });
 
   test('builds orderBy with durationMins desc', () => {
-    const result = buildPagination({ ...defaultQuery, sort: 'durationMins', order: 'desc' });
+    const result = buildPagination({
+      ...defaultQuery,
+      sort: 'durationMins',
+      order: 'desc',
+    });
     expect(result.orderBy).toEqual({ durationMins: 'desc' });
   });
 
   test('builds orderBy with departure asc', () => {
-    const result = buildPagination({ ...defaultQuery, sort: 'departure', order: 'asc' });
+    const result = buildPagination({
+      ...defaultQuery,
+      sort: 'departure',
+      order: 'asc',
+    });
     expect(result.orderBy).toEqual({ departure: 'asc' });
   });
 });

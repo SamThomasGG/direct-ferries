@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const FerrySchema = z.object({
+export const SailingSchema = z.object({
   id: z.string(),
   operator: z.string(),
   ship: z.string(),
@@ -11,10 +11,10 @@ export const FerrySchema = z.object({
   price: z.number(),
 });
 
-export type Ferry = z.infer<typeof FerrySchema>;
+export type Sailing = z.infer<typeof SailingSchema>;
 
 export const SearchSchema = z.object({
-  data: z.array(FerrySchema),
+  data: z.array(SailingSchema),
   total: z.number(),
   page: z.number(),
   pageSize: z.number(),
